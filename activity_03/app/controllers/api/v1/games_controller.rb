@@ -39,7 +39,7 @@ module Api
 
       private
         def game_params
-          params.permit(:name)
+          params.permit(:name, :price, :description, :platform_id)
         end
     end
   end
