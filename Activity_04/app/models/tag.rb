@@ -5,4 +5,5 @@ class Tag < ApplicationRecord
   has_and_belongs_to_many :people
   belongs_to :tag_type
   validates :name, uniqueness: true
+  validates :name, presence: true
 end

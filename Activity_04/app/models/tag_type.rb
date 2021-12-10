@@ -3,4 +3,5 @@
 # model for tag_types table
 class TagType < ApplicationRecord
   validates :name, uniqueness: true
+  validates :name, presence: true
 end
