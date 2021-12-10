@@ -2,6 +2,7 @@
 
 module Api
   module V1
+    # tag api logic
     class TagsController < ApplicationController
       def index
         tags = Tag.all

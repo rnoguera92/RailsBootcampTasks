@@ -3,6 +3,7 @@
 require 'json'
 module Api
   module V1
+    # people api logic
     class PeopleController < ApplicationController
       def index
         people = if params[:tag]
@@ -32,6 +33,7 @@ module Api
 
       def update
         person = Person.find(params[:id])
+
         if person.update(person_params.except(:tags))
           person.tags.destroy_all
           (JSON.parse person_params[:tags]).each { |t| person.tags << Tag.find(t) }

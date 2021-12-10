@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# migration for people table creation
 class CreatePeople < ActiveRecord::Migration[6.1]
   def change
     create_table :people do |t|

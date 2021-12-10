@@ -2,6 +2,7 @@
 
 module Api
   module V1
+    # tag type api logic
     class TagsTypeController < ApplicationController
       def index
         tags_type = TagType.all
